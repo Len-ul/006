@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charest="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>网络请求</title>   
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <p>当前时间: <span id="time"></span></p>
+    <form>
+        <label for="username">账号：</label>
+        <input type="text" id="username"><br>
+        <label for="password">密码：</label>
+        <input type="text" id="password"><br><br>
+        <button type="button" onclick="register()">注册</button>
+        <button type="button" onclick="getUserList()">获取用户列表</button>
+    </form>      
+    
+    <ul id="userslist"></ul>
+</body>
+</html>
