@@ -1,20 +1,20 @@
 function getTime(){
     axios({
-        url:'http://43.143.169.168:9090/time/now',
+        url:'https://f.m.suning.com/api/ct.do',
         method:'get',
     }).then(res=>{
-        console.log(res);
-
+        console.log(res.data);
+        document.getElementById('time').innerText = res.data;
     }).catch(error=>{
         console.log(error);
     });
 }
-getTime();
+setInterval(getTime,1000);
 function register(){
     const username=document.getElementById('username').value;
     const password=document.getElementById('password').value;
     axios({
-        url:'http://43.143.169.168:9090/user/register',
+        url:'',
         method:'post',
         data:{
             username,
@@ -28,11 +28,11 @@ function register(){
 }
 function getUserList(){
     axios({
-        url:'http://43.143.169.168:9090/user/all',
+        url:'',
         method:'get',
     }).then(res=>{
         console.log('用户信息列表报文',res);
-
+        document.getElementById('userslist').innerText = res.data;
     }).catch(error=>{
         console.log(error);
     });
